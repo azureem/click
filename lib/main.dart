@@ -1,3 +1,4 @@
+import 'package:click_uz/presentation/screens/auth/otp/otp_screen.dart';
 import 'package:click_uz/presentation/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,13 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Color(0xff252429), statusBarIconBrightness: Brightness.light));
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: OtpScreen(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:click_uz/presentation/screens/auth/otp/otp_screen.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/app_bar.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/btn.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/phoneTextField.dart';
@@ -26,8 +27,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
             txtRegular("Telefon raqamaningizi kiriting", 18.0, Colors.white),
             verticalSpace(24.0),
             phoneTextField(),
-            Spacer(),
-            btnContinue("Davvom ettirish"),
+            const Spacer(),
+            InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OtpScreen()));
+                },
+                child: btnContinue("Davvom ettirish")),
             verticalSpace(24.0)
           ],
         ),

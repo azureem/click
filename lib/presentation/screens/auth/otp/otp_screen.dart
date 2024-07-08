@@ -1,4 +1,7 @@
+import 'package:click_uz/utils/components/spaces/sized_boxes.dart';
 import 'package:flutter/material.dart';
+
+import '../sign_up/sign_up_widgets/btn.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -74,6 +77,8 @@ class _OtpScreenState extends State<OtpScreen> {
             ),
           ),
           Spacer(),
+          btnContinue("Davom ettirish"),
+          verticalSpace(24.0)
         ],
       ),
       backgroundColor: const Color(0xFF252429),

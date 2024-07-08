@@ -8,6 +8,8 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Color(0xff252429), statusBarIconBrightness:Brightness.light));
     return MaterialApp(
       debugShowCheckedModeBanner : true,
 

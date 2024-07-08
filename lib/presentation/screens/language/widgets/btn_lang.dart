@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget btnLang(String name ) {
+Widget btnLang(String name) {
   return Container(
     width: 200, // Width of the button
     height: 50, // Height of the button
@@ -12,20 +12,12 @@ Widget btnLang(String name ) {
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
         colors: [
-          Color(0xFF0092FC),
-          Color(0xFF00B3FD),
-          Color(0xFF0092FC),
+          Color(0xFF0092FC), // Darker blue
+          Color(0xFF0092FC), // Lighter blue in the center
+          Color(0xFF0092FC), // Darker blue
         ],
         stops: [0.0, 0.5, 1.0],
       ),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
-          spreadRadius: 2,
-          blurRadius: 4,
-          offset: Offset(0, 3),
-        ),
-      ],
     ),
     child: Center(
       child: Text(

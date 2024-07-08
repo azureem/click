@@ -2,7 +2,9 @@ import 'package:click_uz/utils/components/txt/text_bold.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget btnContinue(){
+Widget btnContinue(
+    String todo
+    ){
   return Container(
     width: double.infinity,
     decoration: BoxDecoration(
@@ -11,7 +13,7 @@ Widget btnContinue(){
     ),
     child: Padding(
       padding: const EdgeInsets.all(12.0),
-      child: txtBoldAlignment('Davom ettirish', 18.0, Colors.white, TextAlign.center),
+      child: txtBoldAlignment(todo, 18.0, Colors.white, TextAlign.center),
     ),
   );
 }

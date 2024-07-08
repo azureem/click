@@ -30,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             verticalSpace(24.0),
             phoneTextField(),
             Spacer(),
-            btnContinue(),
+            btnContinue("Davvom ettirish"),
             verticalSpace(24.0)
             
           ],

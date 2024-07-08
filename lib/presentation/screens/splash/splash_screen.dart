@@ -1,5 +1,6 @@
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:click_uz/presentation/screens/language/language_screen.dart';
+import 'package:click_uz/presentation/screens/pin_code/pin_code_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

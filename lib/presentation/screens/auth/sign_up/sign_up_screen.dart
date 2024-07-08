@@ -2,9 +2,7 @@ import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/app_b
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/btn.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_widgets/phoneTextField.dart';
 import 'package:click_uz/utils/components/spaces/sized_boxes.dart';
-import 'package:click_uz/utils/components/txt/text_bold.dart';
 import 'package:click_uz/utils/components/txt/text_simple.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -23,7 +21,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
-
           children: [
             verticalSpace(150.0),
             txtRegular("Telefon raqamaningizi kiriting", 18.0, Colors.white),
@@ -32,11 +29,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Spacer(),
             btnContinue(),
             verticalSpace(24.0)
-            
           ],
         ),
       ),
     );
   }
 }
-

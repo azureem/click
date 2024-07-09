@@ -1,6 +1,8 @@
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:click_uz/presentation/screens/language/language_screen.dart';
 import 'package:click_uz/presentation/screens/pin_code/pin_code_screen.dart';
+import 'package:click_uz/utils/components/colors/colors.dart';
+import 'package:click_uz/utils/components/image_paths/image_assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,9 +33,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF26252B),
+      backgroundColor: ClickColors.background,
       body: Center(
-        child: Image.asset('assets/images/logo.png', width: 250, height: 200,),
+        child: Image.asset(ImageAssets.clickLogo, width: 250, height: 200,),
       ),
     );
   }

@@ -49,7 +49,8 @@ class _Bottom extends State<Bottom> {
         onTap: _onItemTapped,
         items:  [
           BottomNavigationBarItem(
-            icon:  SvgPicture.asset('assets/images/svg/main_logo.svg', width: 24.0, height: 24.0, color: Colors.blue,),
+            icon:  SvgPicture.asset('assets/images/svg/main_logo.svg',
+              width: 24.0, height: 24.0, color: Colors.blue,),
             label: 'Главная',
           ),
           BottomNavigationBarItem(

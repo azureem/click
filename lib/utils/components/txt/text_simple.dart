@@ -7,6 +7,7 @@ Widget txtRegular(
     double size,
     Color txtColor
     ){
-  return Text(text, style: TextStyle(color: txtColor, fontSize: size),);
+  return
+    Text(text, style: TextStyle(color: txtColor, fontSize: size),);
 
 }

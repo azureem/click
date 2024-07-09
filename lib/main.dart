@@ -1,5 +1,7 @@
 import 'package:click_uz/presentation/screens/auth/otp/otp_screen.dart';
+import 'package:click_uz/presentation/screens/bottom_navigation/bottom.dart';
 import 'package:click_uz/presentation/screens/splash/splash_screen.dart';
+import 'package:click_uz/presentation/screens/tabs_screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: Bottom(),
     );
   }
 }

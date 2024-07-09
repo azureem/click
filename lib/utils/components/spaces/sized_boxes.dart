@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 
 SizedBox verticalSpace(
@@ -9,7 +7,6 @@ SizedBox verticalSpace(
     height: height,
   );
 }
-
 
 SizedBox horizontalSpace(
     double height

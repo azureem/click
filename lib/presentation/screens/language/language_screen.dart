@@ -15,7 +15,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
   Widget build(BuildContext context) {
     return Center(
         child: Scaffold(
-      backgroundColor: Color(0xFF26252B),
+      backgroundColor: const Color(0xFF26252B),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

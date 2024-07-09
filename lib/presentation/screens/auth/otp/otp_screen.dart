@@ -27,11 +27,11 @@ class _OtpScreenState extends State<OtpScreen> {
           const Spacer(),
           InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PinCodeScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const PinCodeScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: btnContinue("Davom ettirish"),
+                child: btnContinue("Davom ettirish", false),
               )),
           verticalSpace(24.0)
         ],

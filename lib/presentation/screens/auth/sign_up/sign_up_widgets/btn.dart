@@ -3,13 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget btnContinue(
-    String todo
+    String todo,
+    bool isPhoneVisible
     ){
   return Container(
     width: double.infinity,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12.0),
-      color: Color(0xFF47495E)
+      color: (isPhoneVisible)?Color(0xFF0274F1): Color(0xFF47495E),
     ),
     child: Padding(
       padding: const EdgeInsets.all(12.0),

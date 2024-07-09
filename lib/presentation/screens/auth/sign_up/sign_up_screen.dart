@@ -14,6 +14,8 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  bool isPhoneVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,13 +28,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
             verticalSpace(150.0),
             txtRegular("Telefon raqamaningizi kiriting", 18.0, Colors.white),
             verticalSpace(24.0),
-            phoneTextField(),
+            phoneTextField((value) {
+              if(value.length==14){
+                setState(() {
+                  isPhoneVisible = true;
+                });
+              }else{
+                setState(() {
+                  isPhoneVisible = false;
+                });
+              }
+            }),
             const Spacer(),
             InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const OtpScreen()));
                 },
-                child: btnContinue("Davvom ettirish")),
+                child: btnContinue("Davvom ettirish", isPhoneVisible)),
             verticalSpace(24.0)
           ],
         ),

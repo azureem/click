@@ -20,13 +20,21 @@ class _LanguageScreenState extends State<LanguageScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            btnLang("Русский"),
-            verticalSpace(24.0),
-            btnLang("O'zbek"),
+            InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                },
+                child: btnLang("Русский")),
             verticalSpace(24.0),
             InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                },
+                child: btnLang("O'zbek")),
+            verticalSpace(24.0),
+            InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
                 },
                 child: btnLang("English")),
           ],

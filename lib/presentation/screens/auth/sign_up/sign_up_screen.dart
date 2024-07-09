@@ -17,10 +17,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF26252B),
+      backgroundColor: const Color(0xFF26252B),
       appBar: signInAppBar(),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
             verticalSpace(150.0),
@@ -30,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const Spacer(),
             InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OtpScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const OtpScreen()));
                 },
                 child: btnContinue("Davvom ettirish")),
             verticalSpace(24.0)

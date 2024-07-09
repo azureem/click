@@ -9,9 +9,9 @@ SizedBox verticalSpace(
 }
 
 SizedBox horizontalSpace(
-    double height
+    double width
     ){
   return SizedBox(
-    height: height,
+    width: width,
   );
 }

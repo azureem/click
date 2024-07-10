@@ -1,11 +1,13 @@
-import 'package:click_uz/presentation/screens/tabs_screens/main/main_screen.dart';
-import 'package:click_uz/presentation/screens/tabs_screens/payment/payment_screen.dart';
-import 'package:click_uz/presentation/screens/tabs_screens/reports/report_screen.dart';
-import 'package:click_uz/presentation/screens/tabs_screens/services/service_screen.dart';
-import 'package:click_uz/presentation/screens/tabs_screens/transfer/transfer_screen.dart';
-import 'package:flutter/cupertino.dart';
+
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/reports/report_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/transfer/transfer_screen.dart';
+import 'package:click_uz/utils/components/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../main_screens/tabs_screens/main/main_screen.dart';
+import '../main_screens/tabs_screens/payment/payment_screen.dart';
+import '../main_screens/tabs_screens/services/service_screen.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({super.key});
@@ -34,40 +36,43 @@ class _Bottom extends State<Bottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ClickColors.background,
       body: IndexedStack(
         index: _currentIndex,
         children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: ClickColors.background,
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         //selectedItemColor: Color(0xffffba08),
-        selectedItemColor: Colors.black54,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: ClickColors.darkBlue,
+        unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
-        items:  [
+        items: [
           BottomNavigationBarItem(
-            icon:  SvgPicture.asset('assets/images/svg/main_logo.svg',
-              width: 24.0, height: 24.0, color: Colors.blue,),
-            label: 'Главная',
+            icon: Image.asset(
+              'assets/images/circle_logo.png',
+              width: 24.0,
+              height: 24.0,
+            ),
+            label: 'Asosiy',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.manage_search_sharp),
-            label: 'Каталог',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.account_balance_wallet_outlined),
+            label: "To'lov",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Корзина',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_right_alt_rounded),
+            label: "O'tqazmalar",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: 'Избранное',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.pie_chart_outline_rounded),
+            label: 'Hisobotlar',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Профиль',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.medical_services_outlined),
+            label: 'Xizmatlar',
           ),
         ],
       ),

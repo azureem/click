@@ -7,6 +7,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+
+
+Row threeContainers(){
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      itemCenterContainer(ImageAssets.homeImg, "Click Pass"),
+      itemCenterContainer(ImageAssets.autoImg, "Click Pass"),
+      itemCenterContainer(ImageAssets.charityImg, "Click Pass"),
+      // itemCenterContainer(ImageAssets.fastfoodImg, "Click Pass"),
+    ],
+  );
+}
+
+
+
+
 Widget itemCenterContainer(
     String img, 
     String title
@@ -31,13 +48,3 @@ Widget itemCenterContainer(
 }
 
 
-Row threeContainers(){
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      itemCenterContainer(ImageAssets.clickLogo, "Click Pass"),
-      itemCenterContainer(ImageAssets.clickLogo, "Click Pass"),
-      itemCenterContainer(ImageAssets.clickLogo, "Click Pass"),
-    ],
-  );
-}

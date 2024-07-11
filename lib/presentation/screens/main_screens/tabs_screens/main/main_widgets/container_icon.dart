@@ -14,6 +14,8 @@ Widget iconContainer(
    height: 68,
    child: Column(
 
+     crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
+
      children: [
        Image.asset(img, width: 28.0, height: 28.0,),
        verticalSpace(4.0),
@@ -24,14 +26,27 @@ Widget iconContainer(
 }
 
 
-Widget rowIconContainer(){
+Widget rowIconContainer1(){
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
       iconContainer(ImageAssets.homeImg, "Mening uyim"),
-      iconContainer('assets/images/home_icon.png', "Mening avto"),
-      iconContainer('assets/images/home_icon.png', "Xayriya"),
-      iconContainer('assets/images/home_icon.png', "Taomlar yetqazish"),
+      iconContainer(ImageAssets.autoImg, "Mening avto"),
+      iconContainer(ImageAssets.charityImg, "Xayriya"),
+      iconContainer(ImageAssets.fastfoodImg, "Taomlar yetkazish"),
+
+    ],
+  );
+}
+
+Widget rowIconContainer2(){
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      iconContainer(ImageAssets.planeImg, "Avia chiptalar"),
+      iconContainer(ImageAssets.starImg, "Tanlangan to'lovlar"),
+      iconContainer(ImageAssets.qrImg, "Mening QR-kodim"),
+      iconContainer(ImageAssets.familyImg, "Mening oilam"),
 
     ],
   );

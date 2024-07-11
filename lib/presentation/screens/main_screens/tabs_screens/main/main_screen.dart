@@ -106,20 +106,37 @@ class _MainScreenState extends State<MainScreen> {
               child: verticalSpace(24.0),
             ),
             SliverToBoxAdapter(
-              child: homeFirstContainer("assets/images/cash.png", ImageAssets.clickLogo, "Bu oyda cashback", "Premium", "Obunani ulash"),
+              child: homeFirstContainer(
+                  ImageAssets.cachImg,
+                  ImageAssets.premium, "Bu oyda cashback", "Premium", "Obunani ulash"),
             ),
+
             SliverToBoxAdapter(
               child: verticalSpace(24.0),
             ),
             SliverToBoxAdapter(
               child: threeContainers(),
             ),
+          
             SliverToBoxAdapter(
-              child: rowIconContainer(),
+              child: verticalSpace(16.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: rowIconContainer1(),
+            ),
+
+            SliverToBoxAdapter(
+              child: verticalSpace(46.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: rowIconContainer2(),
             ),
             SliverToBoxAdapter(
-              child: SizedBox(height: 5000),
+              child: verticalSpace(150.0),
             ),
+
           ],
         ),
       ),

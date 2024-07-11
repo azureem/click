@@ -51,9 +51,10 @@ Widget homeFirstContainer(
           padding: const EdgeInsets.only(right: 36.0),
           child: Column(
             children: [
+              verticalSpace(2.0),
               Row(
                 children: [
-                  Image.asset(img1, width: 36, height: 36,),
+                  Image.asset(img2, width: 34, height: 34,),
                   horizontalSpace(4.0),
                   txtBold(txt2, 16.0, Colors.yellow)
                 ],

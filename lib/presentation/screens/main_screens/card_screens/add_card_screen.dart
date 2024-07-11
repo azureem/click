@@ -43,7 +43,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             padding: const EdgeInsets.symmetric(vertical: 15),
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color(0xFF33333F)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color(0xFF35353F)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -60,8 +60,10 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   height: 50,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.black12), color: const Color(0xFF1F1F23)),
+                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Color(0xFF4A4A54)), color: const Color(0xFF35353F)),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Expanded(
                         child: TextField(
@@ -79,6 +81,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                           onChanged: (value) {},
                         ),
                       ),
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.document_scanner_outlined, color: Color(0xFF0274F1),size: 20,))
                     ],
                   ),
                 ),
@@ -95,7 +98,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   height: 50,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.black12), color: const Color(0xFF1F1F23)),
+                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Color(0xFF4A4A54)), color: const Color(0xFF35353F)),
                   child: Row(
                     children: [
                       Expanded(
@@ -130,7 +133,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   height: 50,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.black12), color: const Color(0xFF1F1F23)),
+                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Color(0xFF4A4A54)), color: const Color(0xFF35353F)),
                   child: Row(
                     children: [
                       Expanded(
@@ -176,4 +179,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
       ),
     ));
   }
+
+
+
 }

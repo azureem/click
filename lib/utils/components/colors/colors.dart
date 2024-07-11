@@ -8,6 +8,8 @@ class ClickColors{
   static const lightBlue =Color(0xFF02BCF1);
   static const middling =Color(0xFF181F28);
   static const containerWidgetColor =Color(0xFF35353F);
+  static const appBarBackground=Color(0xFF252429);
+  static const bodyBackground=Color(0xFF252429);
 
 
 }

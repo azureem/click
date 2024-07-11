@@ -1,5 +1,7 @@
 import 'package:click_uz/presentation/screens/auth/otp/otp_screen.dart';
 import 'package:click_uz/presentation/screens/bottom_navigation/bottom.dart';
+import 'package:click_uz/presentation/screens/main_screens/card_screens/add_card_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/card_screens/card_category_screen.dart';
 import 'package:click_uz/presentation/screens/splash/splash_screen.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Bottom(),
+      home: const AddCardScreen(),
     );
   }
 }

@@ -50,7 +50,7 @@ Widget itemTextFilled(BuildContext context,TextEditingController editingControll
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         border: Border.all(color: Colors.black12),
-        color: Color(0xFF1F1F23)
+        color: const Color(0xFF1F1F23)
     ),
     child: Row(
       children: [

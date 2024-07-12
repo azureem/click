@@ -1,8 +1,11 @@
 import 'package:click_uz/presentation/screens/auth/otp/otp_screen.dart';
+import 'package:click_uz/presentation/screens/auth/sign_up/register/register_screen.dart';
 import 'package:click_uz/presentation/screens/bottom_navigation/bottom.dart';
 import 'package:click_uz/presentation/screens/main_screens/card_screens/add_card_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/card_screens/card_category_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/payment/payment_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/reports/report_screen.dart';
+import 'package:click_uz/presentation/screens/pin_code/pin_code_screen.dart';
 import 'package:click_uz/presentation/screens/splash/splash_screen.dart';
 import 'package:click_uz/presentation/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';

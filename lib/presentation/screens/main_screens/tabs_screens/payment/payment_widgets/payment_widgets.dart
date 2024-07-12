@@ -9,14 +9,14 @@ class ItemCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 65,
       width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: ClickColors.containerWidgetColor),
       child: Row(
         children: [
-          Image.network(image),
+          Image.network(image, height: 25,width: 25,),
           const SizedBox(width: 10),
           Text(title, style: const TextStyle(color: Colors.white))
         ],

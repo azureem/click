@@ -1,3 +1,4 @@
+import 'package:click_uz/presentation/screens/bottom_navigation/bottom.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/components/spaces/sized_boxes.dart';
@@ -7,8 +8,8 @@ Widget numButton(int number, VoidCallback voidCallback) {
     onTap: voidCallback,
     child: Container(
       //padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-      width: 80,
-      height: 80,
+      width: 60,
+      height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: const Color(0xFF35353F),
@@ -51,17 +52,22 @@ AppBar appBar(BuildContext context){
   );
 }
 
-Widget itemClickPass(){
+Widget itemClickPass(BuildContext context){
   return Row(
     children: [
-      Container(
-        width: 150,
-        margin: const EdgeInsets.all(10),
-        child: const Text(
-          "Click-Pin yoddan chiqardingizmi?",
-          style: TextStyle(fontSize: 18, color: Colors.white24),
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
+      InkWell(
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Bottom()));
+        },
+        child: Container(
+          width: 150,
+          margin: const EdgeInsets.all(10),
+          child: const Text(
+            "Click-Pin yoddan chiqardingizmi?",
+            style: TextStyle(fontSize: 18, color: Colors.white24),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ),
       const Spacer(),
@@ -115,8 +121,8 @@ Widget itemNumberPin(bool isPinVisible, String enterPin){
     children: List.generate(5, (index) {
       return (isPinVisible)?Container(
         margin: const EdgeInsets.all(6),
-        width: 16,
-        height: 16,
+        width: 10,
+        height: 10,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: index < enterPin.length
@@ -127,8 +133,8 @@ Widget itemNumberPin(bool isPinVisible, String enterPin){
             border: Border.all(color: const Color(0xFF0274F1))),
       ):Container(
         margin: const EdgeInsets.all(6),
-        width: 16,
-        height: 16,);
+        width: 10,
+        height: 10,);
     }),
   );
 }

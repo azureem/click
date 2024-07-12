@@ -19,97 +19,158 @@ class _PaymentScreenState extends State<PaymentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        forceMaterialTransparency: true,
+        title: const Center(
             child: Text(
           "To'lov",
-          style: TextStyle(color: Colors.white, fontSize: 16),
+          style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         )),
         backgroundColor: ClickColors.appBarBackground,
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: Row(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width - 100,
+                margin: const EdgeInsets.symmetric(horizontal: 15),
+                height: 40,
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFF4A4A54)), color: const Color(0xFF35353F)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Transform.rotate(
+                        angle: math.pi / 2,
+                        child: const Icon(
+                          Icons.search,
+                          color: Colors.white24,
+                        )),
+                    Expanded(
+                      child: TextField(
+                        cursorColor: const Color(0xFF0274F1),
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Search',
+                          hintStyle: TextStyle(
+                            color: Colors.white24,
+                          ),
+                        ),
+                        keyboardType: TextInputType.text,
+                        controller: cardController,
+                        style: const TextStyle(color: Colors.white),
+                        maxLines: 1,
+                        onChanged: (value) {
+                          setState(() {
+                            if (value != '') {
+                              isNotValue = true;
+                            } else {
+                              isNotValue = false;
+                            }
+                          });
+                        },
+                      ),
+                    ),
+                    (isNotValue)
+                        ? GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          cardController.clear();
+                          isNotValue = false;
+                        });
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.white24),
+                        child: const Icon(
+                          Icons.close,
+                          size: 18,
+                          color: Colors.black54,
+                        ),
+                      ),
+                    )
+                        : Container(),
+                  ],
+                ),
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.document_scanner_outlined,
+                    color: Color(0xFF0274F1),
+                    size: 30,
+                  ))
+            ],
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
+            Column(
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width - 100,
-                  margin: const EdgeInsets.symmetric(horizontal: 15),
-                  height: 40,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), border: Border.all(color: Color(0xFF4A4A54)), color: const Color(0xFF35353F)),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 18),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Transform.rotate(
-                          angle: math.pi / 2,
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.white24,
-                          )),
-                      Expanded(
-                        child: TextField(
-                          cursorColor: Color(0xFF0274F1),
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search',
-                            hintStyle: TextStyle(
-                              color: Colors.white24,
-                            ),
-                          ),
-                          keyboardType: TextInputType.number,
-                          controller: cardController,
-                          style: const TextStyle(color: Colors.white),
-                          maxLines: 1,
-                          onChanged: (value) {
-                            setState(() {
-                              print("$value");
-                              if (value != '') {
-                                isNotValue = true;
-                              } else {
-                                isNotValue = false;
-                              }
-                            });
-                          },
+                      Container(
+                        width: MediaQuery.of(context).size.width/3-15,
+                        height: 100,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: ClickColors.containerWidgetColor,
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.star_border, color: Color(0xFF0274F1),size: 30,),
+                            Spacer(),
+                            Text("Saralangan to'lovlar", style: TextStyle(color: Colors.white, fontSize: 12),)
+                          ],
                         ),
                       ),
-                      (isNotValue)
-                          ? GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  cardController.clear();
-                                  isNotValue = false;
-                                });
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.white24),
-                                child: Icon(
-                                  Icons.close,
-                                  size: 18,
-                                  color: Colors.black54,
-                                ),
-                              ),
-                            )
-                          : Container(),
+                      Container(
+                        width: MediaQuery.of(context).size.width/3-15,
+                        height: 100,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: ClickColors.containerWidgetColor,
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.calendar_month, color: Color(0xFF0274F1),size: 30,),
+                            Spacer(),
+                            Text("Avtoto'lovlar", style: TextStyle(color: Colors.white, fontSize: 12),)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width/3-15,
+                        height: 100,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: ClickColors.containerWidgetColor,
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.location_on_outlined, color: Color(0xFF0274F1),size: 30,),
+                            Spacer(),
+                            Text("Joylarda to'lov", style: TextStyle(color: Colors.white, fontSize: 12),)
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.document_scanner_outlined,
-                      color: Color(0xFF0274F1),
-                      size: 30,
-                    ))
-              ],
-            ),
-            Column(
-              children: [
-                Row(),
                 ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     return ItemCategory(image: items[index]['icon']!, title: items[index]['title']!);
                   },

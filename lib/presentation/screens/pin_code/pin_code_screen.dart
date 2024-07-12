@@ -9,7 +9,7 @@ class PinCodeScreen extends StatefulWidget {
 }
 
 class _PinCodeScreenState extends State<PinCodeScreen> {
-  bool isPinVisible = false;
+  bool isPinVisible = true;
   String enterPin = '';
 
   @override
@@ -53,7 +53,7 @@ class _PinCodeScreenState extends State<PinCodeScreen> {
               }
             });
           }),
-          itemClickPass()
+          itemClickPass(context)
         ],
       ),
       backgroundColor: const Color(0xFF252429),

@@ -22,7 +22,7 @@ class _Bottom extends State<Bottom> {
   final List<Widget> _screens = [
     const MainScreen(),
     const PaymentScreen(),
-    const TransferScreen(),
+   // const TransferScreen(),
     const ReportScreen(),
     const ServiceScreen(),
   ];
@@ -46,7 +46,7 @@ class _Bottom extends State<Bottom> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         //selectedItemColor: Color(0xffffba08),
-        selectedItemColor: ClickColors.darkBlue,
+        selectedItemColor: ClickColors.darkerBlue,
         unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
         items: [

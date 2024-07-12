@@ -1,7 +1,14 @@
 
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/all_see.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/cards_item/card_item.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/containerImage.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/family_comission.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/locationItems.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/main/main_widgets/phone_pay.dart';
 import 'package:click_uz/utils/components/colors/colors.dart';
 import 'package:click_uz/utils/components/image_paths/image_assets.dart';
 import 'package:click_uz/utils/components/spaces/sized_boxes.dart';
+import 'package:click_uz/utils/components/txt/text_bold.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
     double transitionOffset = 150.0;
 
     if (_scrollController.offset >= targetOffset - transitionOffset) {
-      if (_appBarColor != Colors.black) {
+      if (_appBarColor != ClickColors.background) {
         setState(() {
           _appBarColor = ClickColors.background;
         });
@@ -76,7 +83,7 @@ class _MainScreenState extends State<MainScreen> {
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
-                            ClickColors.darkBlue,
+                            ClickColors.darkerBlue,
                           ],
                         ),
                       ),
@@ -90,11 +97,12 @@ class _MainScreenState extends State<MainScreen> {
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [
-                                ClickColors.darkBlue,
+                                ClickColors.darkerBlue,
                                 ClickColors.background,
                               ],
                             ),
                           ),
+                        //  child: cardList(ls),
                         ),
                       ),
                     ),
@@ -117,6 +125,23 @@ class _MainScreenState extends State<MainScreen> {
             SliverToBoxAdapter(
               child: threeContainers(),
             ),
+
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+
+
+
+            const SliverToBoxAdapter(
+              child: FamilyCommission(title1: "Oila a'zolariga",title2: "komissiyasiz", title3: "pul o'tqazing"),
+            ),
+
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+            SliverToBoxAdapter(
+              child: allSee("Xizmatlar", "Hammasi"),
+            ),
           
             SliverToBoxAdapter(
               child: verticalSpace(16.0),
@@ -133,8 +158,61 @@ class _MainScreenState extends State<MainScreen> {
             SliverToBoxAdapter(
               child: rowIconContainer2(),
             ),
+
             SliverToBoxAdapter(
-              child: verticalSpace(150.0),
+              child: verticalSpace(24.0),
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: txtBold("Mobil aloqa uchun to'lov", 18.0, Colors.white54),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+            SliverToBoxAdapter(
+              child: PhonePay( phone: "",),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: rowImgContainer(lsImages),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: allSee("Joylarda", "Hammasi"),
+            ),
+
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: locationContainer(ImageAssets.fastfoodImg, "Adamari Yunusobod ayollar", "24 km"),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(16.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: locationContainer(ImageAssets.fastfoodImg, "MERIT education", "24 km"),
+            ),
+
+            SliverToBoxAdapter(
+              child: verticalSpace(24.0),
+            ),
+
+            SliverToBoxAdapter(
+              child: settingHome(),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(48.0),
             ),
 
           ],
@@ -145,3 +223,7 @@ class _MainScreenState extends State<MainScreen> {
 }
 
 
+
+
+
+List<String> ls = ["45","89"];

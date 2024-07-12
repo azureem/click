@@ -36,8 +36,8 @@ Widget homeFirstContainer(
                children: [
                  Image.asset(img1, width: 36, height: 36,),
                  horizontalSpace(4.0),
-                 txtBold("0 ", 16.0, ClickColors.darkBlue),
-                 txtBold("so'm", 18.0, ClickColors.darkBlue)
+                 txtBold("0 ", 16.0, ClickColors.darkerBlue),
+                 txtBold("so'm", 18.0, ClickColors.darkerBlue)
                ],
              ),
               verticalSpace(4.0),

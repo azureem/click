@@ -1,9 +1,7 @@
-
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/reports/report_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/transfer/transfer_screen.dart';
 import 'package:click_uz/utils/components/colors/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../main_screens/tabs_screens/main/main_screen.dart';
 import '../main_screens/tabs_screens/payment/payment_screen.dart';
@@ -22,7 +20,7 @@ class _Bottom extends State<Bottom> {
   final List<Widget> _screens = [
     const MainScreen(),
     const PaymentScreen(),
-   // const TransferScreen(),
+    const TransferScreen(),
     const ReportScreen(),
     const ServiceScreen(),
   ];

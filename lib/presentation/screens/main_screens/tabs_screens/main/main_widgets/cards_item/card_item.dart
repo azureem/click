@@ -12,7 +12,7 @@ class CardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 12.0),
-      height: 250,
+      height: 150,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
@@ -30,7 +30,7 @@ class CardTransparent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 12.0),
-      height: 250,
+      height: 150,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
@@ -46,7 +46,7 @@ class CardAdd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 12.0),
-      height: 250,
+      height: 150,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
@@ -66,20 +66,20 @@ class CardAdd extends StatelessWidget {
 
 Widget cardList(List<String> ls) {
   return SizedBox(
-    height: 250,
+    height: 150,
     child: ListView.builder(
       itemCount: ls.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
-        String data = ls[index];
+        /*String data = ls[index];
         if (index == 0) {
           return const CardTransparent();
         } else if (index == ls.length) {
           return const CardAdd();
-        } else {
-          return  CardItem(cardNumber: data);
+        } else {*/
+          return  CardItem(cardNumber: ls[index]);
         }
-      },
+      ,
     ),
   );
 }

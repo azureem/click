@@ -1,7 +1,9 @@
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/reports/report_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/services_screen_bloc.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/transfer/transfer_screen.dart';
 import 'package:click_uz/utils/components/colors/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../main_screens/tabs_screens/main/main_screen.dart';
 import '../main_screens/tabs_screens/payment/payment_screen.dart';
@@ -22,7 +24,10 @@ class _Bottom extends State<Bottom> {
     const PaymentScreen(),
     const TransferScreen(),
     const ReportScreen(),
-    const ServiceScreen(),
+    BlocProvider(
+      create: (context) => ServicesScreenBloc(),
+      child: ServiceScreen(),
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -69,7 +74,7 @@ class _Bottom extends State<Bottom> {
             label: 'Hisobotlar',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.medical_services_outlined),
+            icon: Icon(Icons.grid_view),
             label: 'Xizmatlar',
           ),
         ],

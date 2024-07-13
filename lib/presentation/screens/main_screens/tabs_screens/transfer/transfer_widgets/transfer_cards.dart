@@ -31,6 +31,7 @@ Widget listOfTransferCards() {
   return SizedBox(
     height: 86,
     child: ListView.separated(
+
       scrollDirection: Axis.horizontal,
       itemCount: 4,
       itemBuilder: (context, index) {
@@ -47,7 +48,6 @@ Widget listOfTransferCards() {
 class dataTransferCard {
   final String title;
   final String img;
-
 
   dataTransferCard({required this.title, required this.img});
 }

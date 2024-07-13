@@ -18,7 +18,7 @@ class ScannerCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(width: 1.0, color: Colors.white12),
-        color: Color(0xFF2A2A32),
+        color:ClickColors.textFiledDarkColor,
       ),
       child: TextField(
         controller: controller,

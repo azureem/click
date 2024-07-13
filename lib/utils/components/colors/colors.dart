@@ -12,6 +12,7 @@ class ClickColors{
   static const containerWidgetColor =Color(0xFF35353F);
   static const appBarBackground=Color(0xFF252429);
   static const bodyBackground=Color(0xFF252429);
+  static const textFiledDarkColor=Color(0xFF2A2A32);
 
 
 }

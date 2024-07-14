@@ -1,5 +1,5 @@
-import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_type_screens/click_premium_screen.dart';
-import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_type_screens/donation_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_type_screens/charity_screen/donation_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_type_screens/premium_screen/click_premium_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_widgets/EnumItem.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_widgets/service_items.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/services/service_widgets/service_settings.dart';

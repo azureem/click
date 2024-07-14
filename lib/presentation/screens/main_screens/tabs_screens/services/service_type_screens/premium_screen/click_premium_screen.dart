@@ -12,8 +12,8 @@ class _ClickPremiumScreenState extends State<ClickPremiumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: Column(),
+
+
     );
   }
 }

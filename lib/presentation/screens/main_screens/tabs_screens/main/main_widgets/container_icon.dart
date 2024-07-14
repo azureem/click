@@ -7,46 +7,46 @@ import 'package:flutter/material.dart';
 
 Widget iconContainer(
     String img,
-    String title
+    String title,
+    BuildContext context
     ){
   return Container(
-    width: 68,
+    width: MediaQuery.of(context).size.width/4,
    height: 68,
    child: Column(
-
      crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
-
+     mainAxisAlignment: MainAxisAlignment.spaceAround,
      children: [
        Image.asset(img, width: 28.0, height: 28.0,),
-       verticalSpace(4.0),
-       txtRegular(title, 13.0, Colors.white)
+       //txtRegular(title, 13.0, Colors.white)
+       Text(title, style: TextStyle(color: Colors.white, fontSize: 13),maxLines: 2,overflow: TextOverflow.ellipsis,textAlign: TextAlign.center,)
      ],
    ),
   );
 }
 
 
-Widget rowIconContainer1(){
+Widget rowIconContainer1(BuildContext context){
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
-      iconContainer(ImageAssets.homeImg, "Mening uyim"),
-      iconContainer(ImageAssets.autoImg, "Mening avto"),
-      iconContainer(ImageAssets.charityImg, "Xayriya"),
-      iconContainer(ImageAssets.fastfoodImg, "Taomlar yetkazish"),
+      iconContainer(ImageAssets.homeImg, "Mening uyim", context),
+      iconContainer(ImageAssets.autoImg, "Mening avto", context),
+      iconContainer(ImageAssets.charityImg, "Xayriya", context),
+      iconContainer(ImageAssets.fastfoodImg, "Taomlar yetkazish", context),
 
     ],
   );
 }
 
-Widget rowIconContainer2(){
+Widget rowIconContainer2(BuildContext context){
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
-      iconContainer(ImageAssets.planeImg, "Avia chiptalar"),
-      iconContainer(ImageAssets.starImg, "Tanlangan to'lovlar"),
-      iconContainer(ImageAssets.qrImg, "Mening QR-kodim"),
-      iconContainer(ImageAssets.familyImg, "Mening oilam"),
+      iconContainer(ImageAssets.planeImg, "Avia chiptalar", context),
+      iconContainer(ImageAssets.starImg, "Tanlangan to'lovlar", context),
+      iconContainer(ImageAssets.qrImg, "Mening QR-kodim", context),
+      iconContainer(ImageAssets.familyImg, "Mening oilam", context),
 
     ],
   );

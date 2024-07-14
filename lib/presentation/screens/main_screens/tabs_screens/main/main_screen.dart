@@ -143,13 +143,13 @@ class _MainScreenState extends State<MainScreen> {
         child: verticalSpace(16.0),
       ),
       SliverToBoxAdapter(
-        child: rowIconContainer1(),
+        child: rowIconContainer1(context),
       ),
       SliverToBoxAdapter(
         child: verticalSpace(46.0),
       ),
       SliverToBoxAdapter(
-        child: rowIconContainer2(),
+        child: rowIconContainer2(context),
       ),
       SliverToBoxAdapter(
         child: verticalSpace(24.0),

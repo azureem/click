@@ -44,3 +44,26 @@ Widget itemReport(BuildContext context) {
     ),
   );
 }
+
+Widget item(bool isChecked, VoidCallback voidCallback, String title){
+  return Expanded(
+    flex: 1,
+    child: Container(
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
+          color: (!isChecked) ? const Color(0xFF0274F1) : ClickColors.bodyBackground),
+      child: InkWell(
+        onTap: voidCallback/*() {
+          setState(() {
+
+          });
+        }*/,
+        child:  Center(
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            )),
+      ),
+    ),
+  );
+}

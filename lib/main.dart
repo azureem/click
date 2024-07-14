@@ -4,6 +4,7 @@ import 'package:click_uz/presentation/screens/bottom_navigation/bottom.dart';
 import 'package:click_uz/presentation/screens/main_screens/card_screens/add_card_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/card_screens/card_category_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/payment/payment_screen.dart';
+import 'package:click_uz/presentation/screens/main_screens/tabs_screens/payment/payment_type_screens/mobile_operator_screen/mobile_operator_screen.dart';
 import 'package:click_uz/presentation/screens/main_screens/tabs_screens/reports/report_screen.dart';
 import 'package:click_uz/presentation/screens/pin_code/pin_code_screen.dart';
 import 'package:click_uz/presentation/screens/splash/splash_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Bottom(),
+      home: const MobileOperatorScreen(),
     );
   }
 }

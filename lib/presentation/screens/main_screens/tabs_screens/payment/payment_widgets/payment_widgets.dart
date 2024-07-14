@@ -24,3 +24,23 @@ class ItemCategory extends StatelessWidget {
     );
   }
 }
+
+Widget item(String title, BuildContext context){
+  return Container(
+    width: MediaQuery.of(context).size.width/3-15,
+    height: 100,
+    padding: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      color: ClickColors.containerWidgetColor,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Icon(Icons.star_border, color: Color(0xFF0274F1),size: 30,),
+        const Spacer(),
+        Text(title, style: const TextStyle(color: Colors.white, fontSize: 12),)
+      ],
+    ),
+  );
+}

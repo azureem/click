@@ -114,23 +114,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width/3-15,
-                        height: 100,
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: ClickColors.containerWidgetColor,
-                        ),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star_border, color: Color(0xFF0274F1),size: 30,),
-                            Spacer(),
-                            Text("Saralangan to'lovlar", style: TextStyle(color: Colors.white, fontSize: 12),)
-                          ],
-                        ),
-                      ),
+                      item("Saralangan to'lovlar", context),
                       Container(
                         width: MediaQuery.of(context).size.width/3-15,
                         height: 100,

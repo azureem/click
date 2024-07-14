@@ -41,7 +41,7 @@ class _ReportScreenState extends State<ReportScreen> {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: const EdgeInsets.symmetric(horizontal: 15),
-            height: 50,
+            height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
             ),
@@ -49,26 +49,11 @@ class _ReportScreenState extends State<ReportScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
-                        color: (!isChecked) ? const Color(0xFF0274F1) : ClickColors.bodyBackground),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          isChecked = !isChecked;
-                        });
-                      },
-                      child: const Center(
-                          child: Text(
-                        "Click bo'yicha hisobot",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                    ),
-                  ),
-                ),
+                item(isChecked, () {
+                  setState(() {
+                    isChecked = !isChecked;
+                  });
+                }, "Click bo'yicha hisobot"),
                 Expanded(
                   flex: 1,
                   child: Container(
@@ -84,7 +69,7 @@ class _ReportScreenState extends State<ReportScreen> {
                       child: const Center(
                           child: Text(
                         "Monitoring",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       )),
                     ),
                   ),
@@ -131,7 +116,7 @@ class _ReportScreenState extends State<ReportScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap:(){
+                  onTap: () {
                     _scaffoldKey.currentState?.closeEndDrawer();
                   },
                   child: const Padding(
@@ -217,7 +202,7 @@ class _ReportScreenState extends State<ReportScreen> {
               child: Row(
                 children: [
                   InkWell(
-                    onTap:(){
+                    onTap: () {
                       _scaffoldKey.currentState?.closeEndDrawer();
                     },
                     child: const Text(

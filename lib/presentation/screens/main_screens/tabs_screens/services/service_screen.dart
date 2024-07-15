@@ -27,6 +27,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
     return Scaffold(
       backgroundColor: ClickColors.background,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         forceMaterialTransparency: true,
         backgroundColor: ClickColors.background,
         title: Center(child: txtBold("Xizmatlar", 20.0, Colors.white)),

@@ -8,6 +8,6 @@ AppBar premiumAppBar(){
     backgroundColor: Colors.transparent,
     forceMaterialTransparency: true,
     elevation: 0,
-   leading: Icon(Icons.arrow_back_ios, color: Colors.white, size: 24.0,),
+   leading: Icon(Icons.arrow_back_ios, color: Colors.white, size: 18.0,),
   );
 }

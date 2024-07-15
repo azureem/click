@@ -32,5 +32,6 @@ class ImageAssets {
  static const monitoring = 'assets/images/monitoring.png';
  static const circleLogo = 'assets/images/circle_logo.png';
  static const market = 'assets/images/img/market.png';
+ static const donation = 'assets/images/img/donation.png';
 
 }

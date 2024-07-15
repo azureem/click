@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 Widget serviceSettings(){
   return Container(
     width: double.infinity,
-    height: 48.0,
+    height: 44.0,
     decoration: BoxDecoration(
-     borderRadius: BorderRadius.circular(8.0),
+     borderRadius: BorderRadius.circular(10.0),
       color: ClickColors.containerWidgetColor
     ),
     child: Row(
@@ -19,7 +19,7 @@ Widget serviceSettings(){
           flex: 2,
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: txtRegular(" Vidjetni sozlash", 18.0, Colors.white54),
+              child: txtRegular(" Vidjetni sozlash", 14.0, Colors.white),
             )),
         Expanded(
           flex: 1,
@@ -57,7 +57,7 @@ Widget serviceSettings(){
                       child: Image.asset(ImageAssets.charityImg, width: 24.0, height: 24.0),
                     )),
                 horizontalSpace(8.0),
-                Icon(Icons.arrow_forward_ios, size: 16.0, color: Colors.white54,)
+                const Icon(Icons.arrow_forward_ios, size: 16.0, color: Colors.white54,)
 
 
 
@@ -82,8 +82,8 @@ class CustomDotDivider extends StatelessWidget {
           return Container(
             width: 3,
             height: 1,
-            margin: EdgeInsets.symmetric(horizontal: 1),
-            decoration: BoxDecoration(
+            margin: const EdgeInsets.symmetric(horizontal: 1),
+            decoration: const BoxDecoration(
               color: Colors.white24,
             ),
           );

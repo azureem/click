@@ -42,7 +42,7 @@ Widget phoneItem(String phone) {
           padding: const EdgeInsets.only(left: 8.0),
           child: txtRegular("+998 95 017 00 69", 18.0, Colors.white),
         ),
-        Spacer(),
+        // Spacer(),
         Icon(Icons.account_circle_outlined, size: 28.0, color: ClickColors.darkerBlue,),
         horizontalSpace(8.0)
       ],

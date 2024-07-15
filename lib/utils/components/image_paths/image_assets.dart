@@ -33,5 +33,4 @@ class ImageAssets {
  static const circleLogo = 'assets/images/circle_logo.png';
  static const market = 'assets/images/img/market.png';
 
-
 }

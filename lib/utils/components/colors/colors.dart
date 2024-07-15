@@ -3,7 +3,7 @@ import 'dart:ui';
 
 class ClickColors{
 
-  static const background =Color(0xFF26252B);
+  static const background =Color(0xED212025);
   static const darkerBlue =Color(0xFF059FDD);
   static const darkBlue =Color(0xFF071870);
 
@@ -13,6 +13,6 @@ class ClickColors{
   static const appBarBackground=Color(0xFF252429);
   static const bodyBackground=Color(0xFF252429);
   static const textFiledDarkColor=Color(0xFF2A2A32);
-
+  static const textTitleColor=Color(0xFFBDBCD0);
 
 }

@@ -12,8 +12,9 @@ class _ClickPremiumScreenState extends State<ClickPremiumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
+      body: Center(
+        child: Text("click preimium"),
+      ),
     );
   }
 }
